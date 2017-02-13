@@ -5,4 +5,4 @@ class Hello {
     console.log('hello world!');
   }
 }
-new Hello();
+var a = new Hello();
