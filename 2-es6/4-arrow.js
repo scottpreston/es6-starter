@@ -8,16 +8,17 @@ function adder(i) {
 console.log(adder(1));
 
 
-
-// as callback
+// // as callback
 function ajax(cb) {
   setTimeout(function() {
     console.log(cb(1));
   },1000);
 }
 
-//invoke old way
-ajax(adder);
+// //invoke old way
+ajax(function(arg) {
+  return arg + 1;
+});
 
-// arrow version
+// // arrow version
 ajax(v => v + 1)

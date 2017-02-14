@@ -6,6 +6,9 @@ class Hello {
   world() {
     console.log('same here!')
   }
+  foo() {
+    console.log('foo')
+  }
 }
 
 class Howdy extends Hello {
@@ -13,7 +16,19 @@ class Howdy extends Hello {
     super();
     console.log("howdy there!")
   }
+  world() {
+    super.world()
+    console.log("hi hi");
+  }
 }
 
-let a = new Howdy();
+class Ola extends Howdy {
+  constructor() {
+    super();
+    console.log('ola')
+  }
+}
+
+let a = new Ola();
 a.world();
+a.foo();
